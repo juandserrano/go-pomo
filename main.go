@@ -7,7 +7,14 @@ import (
 	"time"
 )
 
-const banner string = "######                      ###\n#     # ######  ####  ##### ### \n#     # #      #        #   ### \n######  #####   ####    #    #  \n#   #   #           #   #       \n#    #  #      #    #   #   ### \n#     # ######  ####    #   ###\a"
+const banner string = `
+######                      ###
+#     # ######  ####  ##### ### 
+#     # #      #        #   ### 
+######  #####   ####    #    #  
+#   #   #           #   #       
+#    #  #      #    #   #   ### 
+#     # ######  ####    #   ###`
 
 func main() {
 	if len(os.Args) != 1 {
@@ -34,6 +41,7 @@ func startTimer(timeString string) {
 			time.Sleep(1 * time.Second)
 			timer--
 		}
+
 		i := 0
 		for i < 200 {
 			fmt.Print("\033[H\033[2J")
