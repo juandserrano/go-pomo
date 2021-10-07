@@ -43,6 +43,7 @@ func startTimer(timeString string) {
 		}
 
 		i := 0
+		fmt.Print("\a")
 		for i < 200 {
 			fmt.Print("\033[H\033[2J")
 			fmt.Print(banner)
